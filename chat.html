@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private House Chat</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div id="container">
+        <img id="logo" src="https://i.postimg.cc/6QN6y3Gc/Screenshot-2025-02-17-19-53-19-95.jpg" alt="Private House Chat Logo">
+        
+        <h2>Welcome to Private House Chat</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <p id="message"></p>
+
+        <div id="chat" style="display:none;">
+            <h2>Chat Room</h2>
+
+            <div>
+                <img id="profilePic" src="default.jpg" alt="Profile Picture">
+                <input type="file" id="profilePicUpload" accept="image/*" onchange="uploadProfilePic()">
+            </div>
+
+            <button onclick="changePassword()">Change Password</button>
+
+            <div id="contacts"></div>
+            <div id="messages"></div>
+            <input type="text" id="msgInput" placeholder="Type a message">
+            <button onclick="sendMessage()">Send</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+</body>
+</html>
